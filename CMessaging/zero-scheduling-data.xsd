@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+  id="ILvYouZeroCommonTypes"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  xmlns:ns="http://ilvyou.sourceforge.net/ZeroSchedulingData/v1"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://ilvyou.sourceforge.net/ZeroSchedulingData"
+  targetNamespace="http://ilvyou.sourceforge.net/ZeroSchedulingData"
+  version="2.0">
+
+  <xs:element name="zero-scheduling-data">
+    <xs:annotation>
+      <xs:documentation>Root level node</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element name="schedule" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="exchange" type="exch-detailType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Version of the XML Schema instance</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="exch-detailType">
+    <xs:annotation>
+      <xs:documentation>Define a ZeroMQ job</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="appid" type="xs:int" />
+      <xs:element name="maxmessagesize" type="xs:int" />
+      <xs:element name="sendtimeout" type="xs:int" />
+      <xs:element name="bindendpoints" type="xs:string"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

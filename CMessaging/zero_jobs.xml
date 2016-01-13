@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zero-scheduling-data xmlns="http://ilvyou.sourceforge.net/ZeroSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+  <exchange>
+    <routing>
+      <name>TEST-1</name>
+      <appid>10001</appid>
+      <userid>3775</userid>
+      <clientid>50</clientid>
+      <identifier>50</identifier>
+      <clientip>50</clientip>
+      <zerotype>PUB</zerotype>
+      <maxmessagesize>50</maxmessagesize>
+      <sendtimeout>50</sendtimeout>
+      <bindendpoints>tcp://*:5556</bindendpoints>
+      <description>TEST-1</description>
+    </routing>
+  </exchange>
+</zero-scheduling-data>
